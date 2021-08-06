@@ -2,9 +2,9 @@
 <div>
   <ModalCentros/>
   <vue-confirm-dialog></vue-confirm-dialog>
-  <div class="container"> <!--- Inicio do container principal  --->
+  <div class="container"> <!-- Inicio do container principal  -->
       <div class="row">
-          <div class="col-md-12"> <!--- Inicio do container form  --->
+          <div class="col-md-12"> <!-- Inicio do container form  -->
               <form class="form-group p-2 shadow border bg-white">
                 <titulo texto="Cadastro de Centros"/>
                   <div class="row"> 
@@ -27,21 +27,21 @@
                 </div>
                   <button @click.prevent="salvar()" class="btn-lg btn-primary fas fa-save mt-2"> Salvar</button>
                    <button @click.prevent="limparcampos()" class="btn-lg btn-success fas fa-broom mt-2"> Limpar</button>
-                </form> <!--- Inicio do container form  --->
-            </div> <!--- fim do container form  --->
+                </form> <!-- Inicio do container form  -->
+            </div> <!-- fim do container form  -->
           </div>
 
             <div class="row">
-                <div class="col-md-12 text-center"> <!--- Inicio do container table  --->
+                <div class="col-md-12 text-center"> <!-- Inicio do container table  -->
                 <table class="table table-striped align-middle">
-                <thead class="bg-info"> <!--- Inicio do table  --->
+                <thead class="bg-info"> <!-- Inicio do table  -->
                     <tr class="text-white">
                     <th scope="col">CODIGO</th>
                     <th scope="col">NOME</th>
                     <th scope="col">OPÇÕES</th>
                     </tr>
-                </thead> <!--- fim do table head  --->
-                <tbody> <!--- Inicio do table body  --->
+                </thead> <!-- fim do table head  -->
+                <tbody> <!-- Inicio do table body  -->
                     <tr v-for="centro of centros" :key="centro.id">
                     <td scope="row">#{{centro.CodigoCentro}}</td>
                     <td>{{centro.NomeCentro}}</td>
@@ -50,12 +50,12 @@
                         <button @click="remover(centro)" class="btn btn-danger"><i class="material-icons">delete_sweep</i></button>
                     </td>
                     </tr>
-                </tbody> <!--- fim do tablebody  --->
-                </table> <!--- fim do da table  --->
-                </div> <!--- fim do container da table  --->
+                </tbody> <!-- fim do tablebody  -->
+                </table> <!-- fim do da table  -->
+                </div> <!-- fim do container da table  -->
             </div>
           </div>
-      </div> <!--- fim do container principal  --->
+      </div> <!-- fim do container principal  -->
 </template>
 
 

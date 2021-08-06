@@ -1,12 +1,12 @@
 <template>  
   <div>
       <div v-if="showModal" id="janelamodal">
-        <div class="container"> <!--- Inicio da container  --->
+        <div class="container"> <!-- Inicio da container  -->
             <div class="row">
             <div class="col-md-6 offset-md-3">
             
             <h2 class="bg-primary text-center text-white border border-info rounded m-0 pb-2">Atualizar cliente</h2>
-            <form class="form-control"> <!--- Inicio da form  --->
+            <form class="form-control"> <!-- Inicio da form  -->
               <label>Nome</label>
               <input type="text" placeholder="Nome do cliente" v-model="cliente.NomeCliente" class="form-control">
               <label>Sobrenome</label>
@@ -26,10 +26,10 @@
 
               <button @click.prevent="salvaredit()" class="btn-lg mx-2 btn-success text-white fas fa-edit mt-2"> Editar</button>
               <button @click.prevent="fechar()" class="btn-lg btn-secondary fas fa-sign-out-alt  mt-2"> Voltar</button>
-            </form> <!--- Fim da form  --->
+            </form> <!-- Fim da form  -->
             </div>
             </div>
-        </div> <!--- Fim da container  --->
+        </div> <!-- Fim da container  -->
     </div>  
 </div>
 </template>

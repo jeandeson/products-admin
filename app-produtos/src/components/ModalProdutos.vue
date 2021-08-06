@@ -1,12 +1,12 @@
 <template>  
   <div>
       <div v-if="showModal" id="janelamodal">
-        <div class="container"> <!--- Inicio da container  --->
+        <div class="container"> <!-- Inicio da container  -->
             <div class="row">
             <div class="col-md-6 offset-md-3">
             
             <h2 class="bg-primary text-center text-white border border-info rounded m-0 pb-2">Atualizar Produto</h2>
-            <form class="form-control"> <!--- Inicio da from  --->
+            <form class="form-control"> <!-- Inicio da from  -->
               <label>Nome</label>
               <input type="text" placeholder="Nome do produto" v-model="produto.NomeProduto" class="form-control">
               <label>Codigo</label>
@@ -24,10 +24,10 @@
               <input type="file" @change.prevent="onFileSelected" style="" ref="fileinput" id="fileinput" class="form-control">
               <button @click.prevent="salvaredit()" class="btn-lg mx-2 btn-success text-white fas fa-edit mt-2"> Editar</button>
               <button @click.prevent="fechar()" class="btn-lg btn-secondary fas fa-sign-out-alt  mt-2"> Voltar</button>
-            </form> <!--- fim da container  --->
+            </form> <!-- fim da container  -->
             </div>
             </div>
-        </div> <!--- Fim da container  --->
+        </div> <!-- Fim da container  -->
     </div>  
 </div>
 </template>

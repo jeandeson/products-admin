@@ -1,12 +1,12 @@
 <template>  
   <div>
       <div v-if="showModal" id="janelamodal">
-        <div class="container"> <!--- Inicio do container  --->
+        <div class="container"> <!-- Inicio do container  -->
             <div class="row">
             <div class="col-md-6 offset-md-3">
             
             <h2 class="bg-primary text-center text-white border border-info rounded m-0 pb-2">Atualizar Centro</h2>
-            <form class="form-control"> <!--- Inicio do form  --->
+            <form class="form-control"> <!-- Inicio do form  -->
               <label>Cep</label>
               <input type="number" placeholder="Cep do centro" v-model.number="endereco.Cep" class="form-control">
               <label>Estado</label>
@@ -22,10 +22,10 @@
 
               <button @click.prevent="salvaredit()" class="btn-lg mx-2 btn-success text-white fas fa-edit mt-2"> Editar</button>
               <button @click.prevent="fechar()" class="btn-lg btn-secondary fas fa-sign-out-alt  mt-2"> Voltar</button>
-            </form> <!--- Fim do container  --->
+            </form> <!-- Fim do container  -->
             </div>
             </div>
-        </div> <!--- Fim do container  --->
+        </div> <!-- Fim do container  -->
     </div>  
 </div>
 </template>

@@ -3,10 +3,10 @@
   <Modal/>
   <ModalProdutoImg/>
   <vue-confirm-dialog></vue-confirm-dialog>
-  <div class="container"> <!--- Inicio container principal --->
+  <div class="container"> <!-- Inicio container principal -->
       <div class="row">
-          <div class="col-md-12"> <!--- Inicio coluna do form --->
-                <form class="form-group p-2 shadow border bg-white"> <!--- Inicio form --->
+          <div class="col-md-12"> <!-- Inicio coluna do form -->
+                <form class="form-group p-2 shadow border bg-white"> <!-- Inicio form -->
                   <titulo texto="Cadastro de produtos"/>
                   
                   <div class="row">
@@ -31,15 +31,15 @@
                   </div>
                   <button @click.prevent="salvar()" class="btn-lg btn-primary fas fa-save mt-2"> Salvar</button>
                   <button @click.prevent="limparcampos()" class="btn-lg btn-success fas fa-broom mt-2"> Limpar</button>
-                </form> <!--- Fim form --->
+                </form> <!-- Fim form -->
 
-          </div> <!--- Fim coluna do form --->
-          <div class="container"> <!--- Inicio container da tabela --->
+          </div> <!-- Fim coluna do form -->
+          <div class="container"> <!-- Inicio container da tabela -->
               <div class="row">
-              <div class="col-md-12 text-center"> <!--- Inicio da coluna da tabela --->
+              <div class="col-md-12 text-center"> <!-- Inicio da coluna da tabela -->
               <table class="table table-striped align-middle">
 
-              <thead class="bg-info"> <!--- Cabeçalho da tabela --->
+              <thead class="bg-info"> <!-- Cabeçalho da tabela -->
                   <tr class="text-white">
                   <th scope="col">NOME</th>
                   <th scope="col">QTD</th>
@@ -48,7 +48,7 @@
                   </tr>
               </thead>
 
-              <tbody> <!--- corpo da tabela --->
+              <tbody> <!-- corpo da tabela -->
                   <tr v-for="produto of produtos" :key="produto.id">
                   <td scope="row">{{produto.NomeProduto}}</td>
                   <td >{{produto.QuantidadeProduto}}</td>
@@ -59,14 +59,14 @@
                       <button @click="remover(produto)" class="btn btn-danger"><i class="material-icons">delete_sweep</i></button>
                   </td>
                   </tr>
-              </tbody> <!--- fim corpo da tabela --->
+              </tbody> <!-- fim corpo da tabela -->
               
-              </table> <!--- fim da tabela --->
-              </div> <!--- fim da coluna da tabela --->
+              </table> <!-- fim da tabela -->
+              </div> <!-- fim da coluna da tabela -->
               </div>
         </div>
       </div>
-  </div> <!--- fim do container principal --->   
+  </div> <!-- fim do container principal -->   
 </div>
 </template>
 

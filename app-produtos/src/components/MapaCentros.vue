@@ -1,5 +1,5 @@
 <template>
-  <div class="container-fluid"> <!--- Inicio do container  --->
+  <div class="container-fluid"> <!-- Inicio do container  -->
       <div class="row">
           <div class="col-md-6 offset-md-3 " style="padding:8px;"> 
             <titulo texto="Centros Cadastrados"/> 
@@ -26,7 +26,7 @@
             <button class="btn btn-info mt-2 mx-2" @click.prevent="LimparMaps()">Remover Marcações</button>
           </div>
       </div>
-  </div> <!--- Fim do container  --->
+  </div> <!-- Fim do container  -->
 </template> 
  
 <script>

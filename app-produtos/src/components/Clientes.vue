@@ -2,10 +2,10 @@
 <div>
   <ModalClientes/>
   <vue-confirm-dialog></vue-confirm-dialog>
-  <div class="container"> <!--- Inicio do container principal  --->
+  <div class="container"> <!-- Inicio do container principal  -->
       <div class="row">
-          <div class="col-md-12"> <!--- Inicio da coluna form  --->
-                <form class="form-group p-2 shadow border bg-white"> <!--- Inicio do form  --->
+          <div class="col-md-12"> <!-- Inicio da coluna form  -->
+                <form class="form-group p-2 shadow border bg-white"> <!-- Inicio do form  -->
                     <titulo texto="Cadastro de clientes"/>
                     
                     <div class="row">
@@ -39,22 +39,22 @@
                     </div>
                         <button class="btn-lg btn-primary fas fa-save mt-2" @click.prevent="salvar()"> Salvar</button>
                         <button @click.prevent="Limparcampos()" class="btn-lg btn-success fas fa-broom mt-2"> Limpar</button>
-                   </form> <!--- Fim do container  --->
+                   </form> <!-- Fim do container  -->
 
-            </div> <!--- fim da coluna form  --->
+            </div> <!-- fim da coluna form  -->
 
-          <div class="container"> <!--- Inicio do container table  --->
+          <div class="container"> <!-- Inicio do container table  -->
               <div class="row">
                 <div class="col-md-12 text-center">
-                  <table class="table table-striped align-middle"> <!--- Inicio do table head  --->
+                  <table class="table table-striped align-middle"> <!-- Inicio do table head  -->
                   <thead class="bg-info">
                       <tr class="text-white">
                       <th scope="col">NOME</th>
                       <th scope="col">EMAIL</th>
                       <th scope="col">OPÇÕES</th>
                       </tr>
-                  </thead> <!--- fim do table head  --->
-                  <tbody> <!--- incio do table body  --->
+                  </thead> <!-- fim do table head  -->
+                  <tbody> <!-- incio do table body  -->
                     <tr v-for="cliente of clientes" :key="cliente.id">
                       <td scope="row">{{cliente.NomeCliente}} {{cliente.SobrenomeCliente}}</td>
                       <td>{{cliente.EmailCliente}}</td>
@@ -63,13 +63,13 @@
                           <button @click.prevent="remover(cliente)" class="btn btn-danger"><i class="material-icons">delete_sweep</i></button>
                       </td>
                     </tr>
-                  </tbody> <!--- fim do table body  --->
-                  </table> <!--- fim da  da table  --->
+                  </tbody> <!-- fim do table body  -->
+                  </table> <!-- fim da  da table  -->
                 </div>
              </div>
-          </div> <!--- fim do container da table  --->
+          </div> <!-- fim do container da table  -->
       </div>
-    </div> <!--- fim  do container principal  --->
+    </div> <!-- fim  do container principal  -->
   </div>
 </template>
 
