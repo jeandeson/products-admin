@@ -1,0 +1,47 @@
+{
+  "produtos": [
+    {
+      "nome": "Arduino",
+      "quantidade": "45",
+      "valor": "175,0",
+      "id": 1
+    },
+    {
+      "nome": "Memória",
+      "quantidade": "15",
+      "valor": "250,0",
+      "id": 2
+    }
+  ],
+  "clientes": [
+    {
+      "id": 2,
+      "nome": "Josué",
+      "sobrenome": "Pereira",
+      "cidade": "Alagoinhas",
+      "bairro": "Mangalô",
+      "cep": "42739650",
+      "rua": "São Luís"
+    }
+  ],
+  "centros": [
+    {
+      "id": 1,
+      "nome": "Centro de itaguari",
+      "endereco": "Rua São josé do rio branco",
+      "descricao": "Centro de distuibuição bairro Itaguari"
+    },
+    {
+      "id": 2,
+      "nome": "Jubiscleiton",
+      "endereco": "Itinga",
+      "descricao": "Centro de distuibuição bairro Itinga"
+    },
+    {
+      "nome": "Joséfa",
+      "endereco": "Papa joão",
+      "descricao": "Centro de distuibuição bairro Papa João",
+      "id": 3
+    }
+  ]
+}
