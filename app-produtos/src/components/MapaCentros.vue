@@ -43,7 +43,6 @@ var indice = { lat: -12.8905201, lng: -38.3455045 };
 export default {
   data() {
     return {
-      mostramap:false,
       infoText: "<strong>Centro</strong>",
       icon: {
             url: require("../assets/to_location.png"),
