@@ -13,7 +13,7 @@
                     </div>
                     <div class="error-actions mt-3">
                         <a @click="voltar()" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-home"></span>
-                            Voltar </a><a href="https://i.imgur.com/HE0PG73.jpg" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> Contact Support </a>
+                            Voltar </a><a href="https://i.imgur.com/HE0PG73.jpg" class="btn btn-default btn-lg"><span class="glyphicon glyphicon-envelope"></span> Contate o Suporte </a>
                     </div>
                 </div>
             </div>

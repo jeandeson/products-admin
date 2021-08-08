@@ -21,7 +21,8 @@ import MapaCentros from './components/MapaCentros.vue';
 import MapaClientes from './components/MapaClientes.vue';
 import NotFound from './components/NotFound.vue';
 import Home from './components/Home.vue';
-
+import JwPagination from 'jw-vue-pagination';
+Vue.component('jw-pagination', JwPagination);
 
 
 const router = new VueRouter({

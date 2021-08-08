@@ -14,15 +14,15 @@
               <label>Email</label>
               <input type="text" placeholder="Email do cliente" v-model="cliente.EmailCliente" class="form-control">
               <label>Cep</label>
-              <input type="number" placeholder="Cep do centro" v-model.number="endereco.Cep" class="form-control">
+              <input type="number" placeholder="Cep do cliente" v-model.number="endereco.Cep" class="form-control">
               <label>Estado</label>
-              <input type="text" placeholder="Estado do centro" v-model="endereco.Estado" class="form-control">
+              <input type="text" placeholder="Estado do cliente" v-model="endereco.Estado" class="form-control">
               <label>Cidade</label>
-              <input type="text" placeholder="Cidade do centro" v-model="endereco.Cidade" class="form-control">
+              <input type="text" placeholder="Cidade do cliente" v-model="endereco.Cidade" class="form-control">
               <label>Rua</label>
-              <input type="text" placeholder="Rua do centro" v-model="endereco.Rua" class="form-control">
+              <input type="text" placeholder="Rua do cliente" v-model="endereco.Rua" class="form-control">
               <label>Bairro</label>
-              <input type="text" placeholder="Bairro do centro" v-model="endereco.Bairro" class="form-control">
+              <input type="text" placeholder="Bairro do cliente" v-model="endereco.Bairro" class="form-control">
 
               <button @click.prevent="salvaredit()" class="btn-lg mx-2 btn-success text-white fas fa-edit mt-2"> Editar</button>
               <button @click.prevent="fechar()" class="btn-lg btn-secondary fas fa-sign-out-alt  mt-2"> Voltar</button>

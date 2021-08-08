@@ -1,7 +1,5 @@
 <template>
 <div>
-  <Modal/>
-  <ModalProdutoImg/>
   <vue-confirm-dialog></vue-confirm-dialog>
   <div class="container"> <!-- Inicio container principal -->
       <div class="row">
@@ -49,7 +47,7 @@
               </thead>
 
               <tbody> <!-- corpo da tabela -->
-                  <tr v-for="produto of produtos" :key="produto.id">
+                  <tr v-for="produto of pageOfItems" :key="produto.id">
                   <td scope="row">{{produto.NomeProduto}}</td>
                   <td >{{produto.QuantidadeProduto}}</td>
                   <td>{{produto.ValorProduto}} R$</td>
@@ -60,18 +58,23 @@
                   </td>
                   </tr>
               </tbody> <!-- fim corpo da tabela -->
-              
               </table> <!-- fim da tabela -->
+              <div class="card-footer bg-light fixed-bottom" style="padding:8px;">
+                  <jw-pagination :pageSize=5 :items="produtos" @changePage="onChangePage"></jw-pagination>
+              </div>
               </div> <!-- fim da coluna da tabela -->
               </div>
         </div>
       </div>
   </div> <!-- fim do container principal -->   
+    <modal-produto-img></modal-produto-img>
+      <Modal/>
 </div>
 </template>
 
 
 <script>
+
 import axios from 'axios'
 import { bus } from '../main.js'
 import Produto from '../services/produtos'
@@ -84,7 +87,7 @@ import ModalProdutoImg from './ModalProdutoImg.vue'
 export default {
   data() {
     return {
-      showModal: true,
+      showModal: false,
       showModalImg: true,
 
       produto:{
@@ -96,7 +99,8 @@ export default {
         ImagemProduto:null,
       },
 
-      produtos:[],
+      produtos:[].map(i => ({ id: (i+1), name: 'produto' + (i+1) })),
+      pageOfItems: [],
       erros:[],
       centros:[],
       selectedFile: null,
@@ -120,6 +124,10 @@ export default {
   },
 
   methods: {
+     onChangePage(pageOfItems) {
+            // update page of items
+            this.pageOfItems = pageOfItems;
+        },
     //obter dados da imagem
     onFileSelected(event){
       this.data = new FormData();
@@ -218,6 +226,13 @@ export default {
 </script>
 
 <style>
+.page-item.active .page-link {
+    z-index: 0 !important;
+}
+
+div.card-footer:hover{
+  background-color: #f7f5f3 !important;
+}
 th {
   border: none !important;
 }

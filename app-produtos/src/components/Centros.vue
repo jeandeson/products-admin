@@ -1,6 +1,5 @@
 <template>
 <div>
-  <ModalCentros/>
   <vue-confirm-dialog></vue-confirm-dialog>
   <div class="container"> <!-- Inicio do container principal  -->
       <div class="row">
@@ -42,7 +41,7 @@
                     </tr>
                 </thead> <!-- fim do table head  -->
                 <tbody> <!-- Inicio do table body  -->
-                    <tr v-for="centro of centros" :key="centro.id">
+                    <tr v-for="centro of pageOfItems" :key="centro.id">
                     <td scope="row">#{{centro.CodigoCentro}}</td>
                     <td>{{centro.NomeCentro}}</td>
                     <td>
@@ -52,9 +51,13 @@
                     </tr>
                 </tbody> <!-- fim do tablebody  -->
                 </table> <!-- fim do da table  -->
+                <div class="card-footer bg-light fixed-bottom" style="padding:8px;">
+                  <jw-pagination :pageSize=5 :items="centros" @changePage="onChangePage"></jw-pagination>
+              </div>
                 </div> <!-- fim do container da table  -->
             </div>
           </div>
+          <ModalCentros/>
       </div> <!-- fim do container principal  -->
 </template>
 
@@ -85,7 +88,8 @@ export default {
         Rua: '',
         Cep: null,
       },
-      centros:[],
+      centros:[].map(i => ({ id: (i+1), name: 'centro' + (i+1) })),
+      pageOfItems: [],
       enderecos:[],
       showModal: true,
     }
@@ -101,6 +105,10 @@ export default {
   },
 
   methods: {
+    onChangePage(pageOfItems) {
+            // update page of items
+            this.pageOfItems = pageOfItems;
+        },
     async salvar() {
      await axios.post("http://localhost:5000/api/enderecos", this.endereco).then(response => {
       this.centro.NomeCentro = 'Centro ' + this.endereco.Cidade;

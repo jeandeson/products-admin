@@ -34,9 +34,22 @@ export default {
 </script>
   
 <style>
+    .fixed-bottom{
+      z-index: 0 !important;
+    }
+    .table{
+      margin-bottom: 0;
+    }
+    div.card-footer{
+      padding: 0;
+    }
+    button.btn{
+      max-height: 42px !important;
+    }
     body{
       background: rgb(247, 245, 243);
-      color: black
+      color: black;
+      font-size: 0.94rem;
     }
 </style>
 

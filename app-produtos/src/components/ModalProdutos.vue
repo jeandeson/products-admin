@@ -112,7 +112,7 @@ export default {
           IdCentro:this.produto.IdCentro
         }).then(response => {
           Notificacoes.successmsg(response)
-          this.fechar();
+          this.showModal = false;
           this.data = '';
         });
         } catch (error) {
@@ -140,7 +140,6 @@ export default {
   transition: all ease-in-out 2s;
   position: fixed;
   top: 0px;
-
   display: flex;
   justify-content: center;
   align-items: center;

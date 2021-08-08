@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\drika\\Downloads\\projetos vue\\projetoproduto\\ProjetoProdutos_Api\\ProjetoProdutos_Api.csproj": {}
+    "C:\\Users\\drika\\Downloads\\projetos vue\\projetoproduto\\projetoprodutos_api\\ProjetoProdutos_Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\drika\\Downloads\\projetos vue\\projetoproduto\\ProjetoProdutos_Api\\ProjetoProdutos_Api.csproj": {
+    "C:\\Users\\drika\\Downloads\\projetos vue\\projetoproduto\\projetoprodutos_api\\ProjetoProdutos_Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\drika\\Downloads\\projetos vue\\projetoproduto\\ProjetoProdutos_Api\\ProjetoProdutos_Api.csproj",
+        "projectUniqueName": "C:\\Users\\drika\\Downloads\\projetos vue\\projetoproduto\\projetoprodutos_api\\ProjetoProdutos_Api.csproj",
         "projectName": "ProjetoProdutos_Api",
-        "projectPath": "C:\\Users\\drika\\Downloads\\projetos vue\\projetoproduto\\ProjetoProdutos_Api\\ProjetoProdutos_Api.csproj",
+        "projectPath": "C:\\Users\\drika\\Downloads\\projetos vue\\projetoproduto\\projetoprodutos_api\\ProjetoProdutos_Api.csproj",
         "packagesPath": "C:\\Users\\drika\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\drika\\Downloads\\projetos vue\\projetoproduto\\ProjetoProdutos_Api\\obj\\",
+        "outputPath": "C:\\Users\\drika\\Downloads\\projetos vue\\projetoproduto\\projetoprodutos_api\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\drika\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -26,7 +26,6 @@
         },
         "frameworks": {
           "netcoreapp3.0": {
-            "targetAlias": "netcoreapp3.0",
             "projectReferences": {}
           }
         },
@@ -38,7 +37,6 @@
       },
       "frameworks": {
         "netcoreapp3.0": {
-          "targetAlias": "netcoreapp3.0",
           "dependencies": {
             "EntityFramework": {
               "target": "Package",
@@ -55,10 +53,6 @@
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
-              "target": "Package",
-              "version": "[3.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Proxies": {
               "target": "Package",
               "version": "[3.0.0, )"
             },

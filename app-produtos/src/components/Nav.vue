@@ -1,6 +1,6 @@
 <template>
     <div>
-        <nav class="navbar navbar-expand-lg navbar-dark shadow p-1 mb-4 bg-white rounded">
+        <nav class="navbar navbar-expand-lg navbar-dark shadow p-1 mb-3 bg-white rounded">
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
              </button>

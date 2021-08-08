@@ -66,12 +66,13 @@ export default {
   position: relative;
   display: flex;
   justify-content: center;
+  z-index: 9999;
 }
 .btn{
     display: flex !important;
     position: absolute;
-    margin: 10px;
-    border: 2px solid rgb(186, 25, 25) !important;
+    margin: 5px;
+    border: 0px solid rgb(186, 25, 25) !important;
 }
 img {
   background: white;

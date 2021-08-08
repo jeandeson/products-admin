@@ -1,6 +1,5 @@
 <template>
 <div>
-  <ModalClientes/>
   <vue-confirm-dialog></vue-confirm-dialog>
   <div class="container"> <!-- Inicio do container principal  -->
       <div class="row">
@@ -55,7 +54,7 @@
                       </tr>
                   </thead> <!-- fim do table head  -->
                   <tbody> <!-- incio do table body  -->
-                    <tr v-for="cliente of clientes" :key="cliente.id">
+                    <tr v-for="cliente of pageOfItems" :key="cliente.id">
                       <td scope="row">{{cliente.NomeCliente}} {{cliente.SobrenomeCliente}}</td>
                       <td>{{cliente.EmailCliente}}</td>
                       <td>
@@ -65,11 +64,15 @@
                     </tr>
                   </tbody> <!-- fim do table body  -->
                   </table> <!-- fim da  da table  -->
+                  <div class="card-footer bg-light fixed-bottom" style="padding:8px;">
+                    <jw-pagination :pageSize=5 :items="clientes" @changePage="onChangePage"></jw-pagination>
+                 </div>
                 </div>
              </div>
           </div> <!-- fim do container da table  -->
-      </div>
+       </div>
     </div> <!-- fim  do container principal  -->
+    <ModalClientes/>
   </div>
 </template>
 
@@ -103,7 +106,8 @@ export default {
         Cep: '',
       },
       enderecos:[],
-      clientes:[]
+      clientes:[].map(i => ({ id: (i+1), name: 'cliente' + (i+1) })),
+      pageOfItems: [],
     }
   },
 
@@ -117,6 +121,10 @@ export default {
   },
 
   methods: {
+    onChangePage(pageOfItems) {
+            // update page of items
+            this.pageOfItems = pageOfItems;
+        },
     //salva o cliente
     async salvar() {
       await axios.post("http://localhost:5000/api/enderecos", this.endereco).then(response => {

@@ -73,7 +73,7 @@ export default {
 
   created() {
     this.pegarcentros();
-  },
+  }, 
 
   methods: {
     //metodo principal que faz a conversão de endereços em Latitude e Longitude
