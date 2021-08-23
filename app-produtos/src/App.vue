@@ -11,8 +11,8 @@
 <script>
 
 
-import Nav from './components/Nav.vue'
-import Notificacoes from './components/Notificacoes.vue'
+import Nav from './components/Nav/Nav.vue'
+import Notificacoes from './components/Notificacoes/Notificacoes.vue'
 
 
 export default {
@@ -25,9 +25,6 @@ export default {
   components: {
     Nav,
     Notificacoes,
-  },
-  created() {
-    
   },
 }
 

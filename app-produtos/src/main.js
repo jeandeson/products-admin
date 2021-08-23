@@ -4,40 +4,13 @@ import vueResource from 'vue-resource'
 import fontawesome from './assets/fontawesome/css/fontawesome.min.css'
 import * as VueGoogleMaps from 'vue2-google-maps'
 import VueConfirmDialog from 'vue-confirm-dialog'
-
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
-
-Vue.use(BootstrapVue)
-Vue.use(IconsPlugin)
-
-import VueRouter from 'vue-router';
-
-Vue.use(VueRouter);
-
-import Produtos from './components/Produtos.vue';
-import Clientes from './components/Clientes.vue';
-import Centros from './components/Centros.vue';
-import MapaCentros from './components/MapaCentros.vue';
-import MapaClientes from './components/MapaClientes.vue';
-import NotFound from './components/NotFound.vue';
-import Home from './components/Home.vue';
 import JwPagination from 'jw-vue-pagination';
-Vue.component('jw-pagination', JwPagination);
+import VueCompositionAPI from '@vue/composition-api'
+import router from './Router/index'
 
-
-const router = new VueRouter({
-    mode: 'history',
-    base: __dirname,
-    routes: [
-        { path: '/', name: 'Home', component: Home },
-        { path: '/produtos', component: Produtos },
-        { path: '/clientes', component: Clientes },
-        { path: '/centros', component: Centros },
-        { path: '/MapaCentros', component: MapaCentros },
-        { path: '/MapaClientes', component: MapaClientes },
-        { path: '*', component: NotFound },
-    ]
-});
+import Vuex from 'vuex'
+Vue.use(Vuex)
 
 Vue.use(VueGoogleMaps, {
     load: {
@@ -48,15 +21,27 @@ Vue.use(VueGoogleMaps, {
 
 Vue.use(fontawesome);
 Vue.use(vueResource);
-Vue.use(router);
 Vue.use(VueConfirmDialog);
+Vue.use(BootstrapVue);
+Vue.use(IconsPlugin);
+Vue.use(VueCompositionAPI);
+
+
+import store from "./store/index";
+import VueTheMask from "vue-the-mask";
+
+
+
+Vue.use(store).use(VueTheMask);
+
 Vue.component('vue-confirm-dialog', VueConfirmDialog.default);
+Vue.component('jw-pagination', JwPagination);
 
 Vue.config.productionTip = false;
-
 export const bus = new Vue();
 
 new Vue({
+    store,
     router,
     render: h => h(App),
 }).$mount('#app')
